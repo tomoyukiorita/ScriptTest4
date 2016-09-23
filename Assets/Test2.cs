@@ -21,7 +21,7 @@ public class Test2 : MonoBehaviour {
 			Debug.Log (money [i]);
 		}
 
-		for (int i = 4; i > 0; i--) {
+		for (int i = 4; i >= 0; i--) {
 			Debug.Log (money [i]);
 		}
 }

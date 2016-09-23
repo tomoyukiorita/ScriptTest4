@@ -19,9 +19,6 @@ public class Boss{
 	public void magic(int magicattack){
 		this.mp -= magicattack;
 
-		for (int i = 53; i < 5; i--) {
-			this.mp -= magicattack;
-		}
 		Debug.Log ("魔法攻撃をした。残りMPは" + mp + "。");
 
 
