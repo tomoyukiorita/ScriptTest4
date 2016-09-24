@@ -17,18 +17,20 @@ public class Boss{
 	}
 
 	public void magic(int magicattack){
-		this.mp -= magicattack;
-
-		Debug.Log ("魔法攻撃をした。残りMPは" + mp + "。");
-
-
-		if(mp <= 3) {
-			Debug.Log("MPが足りないため魔法が使えない。");
+		
+		if (mp >= magicattack) {
+			
+			mp -= magicattack;
+			Debug.Log ("魔法攻撃をした。残りMPは" + mp + "。");
+		} else {
+			Debug.Log ("MPが足りないため魔法が使えない。");
 		}
 
-	}
-
+		}
 }
+	
+
+
 
 public class Test : MonoBehaviour {
 
@@ -41,7 +43,7 @@ public class Test : MonoBehaviour {
 		lastboss.attack ();
 		lastboss.defence (3);
 
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i <= 10; i++) {
 			lastboss.magic (5);
 		}
 
